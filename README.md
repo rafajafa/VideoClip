@@ -1,5 +1,5 @@
 # VideoClip
-This repository provides an easy tool to split a specified video into 5 GIF animations and automatically upload them to your personal Steam Workshop, creating a dynamic showcase on Steam with just one click.
+This repositor is a fork repo from https://github.com/inkbarrel/VideoClip with added english support. It provides an easy tool to split a specified video into 5 GIF animations and automatically upload them to your personal Steam Workshop, creating a dynamic showcase on Steam with just one click.
 
 ![使用界面](images/展示效果.png)
 
