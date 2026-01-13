@@ -1,0 +1,5 @@
+opencv-python
+moviepy==1.0.3
+PyQt5
+imageio==2.35.1
+selenium
