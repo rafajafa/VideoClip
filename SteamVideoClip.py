@@ -19,7 +19,12 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.retranslateUi(self)
+        
+        self.lanauge = 'English'
+        
+        # self.retranslateUi(self)
+        self.retranslateUiEnglish(self)
+        
         self.init_slots()
         self.video_path = ''   #视频路径
         self.init_timer()
@@ -29,10 +34,13 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.video_fps = 0
 
     def setupUi(self, MainWindow):
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(505, 474)
         MainWindow.setMinimumSize(QtCore.QSize(505, 474))
-        MainWindow.setMaximumSize(QtCore.QSize(505, 474))
+        MainWindow.setMaximumSize(QtCore.QSize(505, 474))       
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -53,8 +61,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         sizePolicy.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
         self.label_5.setSizePolicy(sizePolicy)
         self.label_5.setMinimumSize(QtCore.QSize(90, 30))
-        font = QtGui.QFont()
-        font.setPointSize(12)
+
         self.label_5.setFont(font)
         self.label_5.setObjectName("label_5")
         self.horizontalLayout.addWidget(self.label_5)
@@ -65,8 +72,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         sizePolicy.setHeightForWidth(self.textEdit.sizePolicy().hasHeightForWidth())
         self.textEdit.setSizePolicy(sizePolicy)
         self.textEdit.setMinimumSize(QtCore.QSize(300, 30))
-        font = QtGui.QFont()
-        font.setPointSize(12)
+        
         self.textEdit.setFont(font)
         self.textEdit.setObjectName("textEdit")
         self.horizontalLayout.addWidget(self.textEdit)
@@ -112,10 +118,9 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
         self.label_6.setSizePolicy(sizePolicy)
-        self.label_6.setMinimumSize(QtCore.QSize(130, 30))
-        self.label_6.setMaximumSize(QtCore.QSize(130, 30))
-        font = QtGui.QFont()
-        font.setPointSize(12)
+        self.label_6.setMinimumSize(QtCore.QSize(160, 30))
+        self.label_6.setMaximumSize(QtCore.QSize(160, 30))
+
         self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
         self.horizontalLayout_3.addWidget(self.label_6)
@@ -132,8 +137,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.label_11.setSizePolicy(sizePolicy)
         self.label_11.setMinimumSize(QtCore.QSize(5, 30))
         self.label_11.setMaximumSize(QtCore.QSize(5, 30))
-        font = QtGui.QFont()
-        font.setPointSize(12)
+
         self.label_11.setFont(font)
         self.label_11.setObjectName("label_11")
         self.horizontalLayout_3.addWidget(self.label_11)
@@ -150,8 +154,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.label_7.setSizePolicy(sizePolicy)
         self.label_7.setMinimumSize(QtCore.QSize(30, 30))
         self.label_7.setMaximumSize(QtCore.QSize(30, 30))
-        font = QtGui.QFont()
-        font.setPointSize(12)
+
         self.label_7.setFont(font)
         self.label_7.setObjectName("label_7")
         self.horizontalLayout_3.addWidget(self.label_7)
@@ -168,8 +171,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.label_12.setSizePolicy(sizePolicy)
         self.label_12.setMinimumSize(QtCore.QSize(5, 30))
         self.label_12.setMaximumSize(QtCore.QSize(5, 30))
-        font = QtGui.QFont()
-        font.setPointSize(12)
+
         self.label_12.setFont(font)
         self.label_12.setObjectName("label_12")
         self.horizontalLayout_3.addWidget(self.label_12)
@@ -199,8 +201,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.label_8.setSizePolicy(sizePolicy)
         self.label_8.setMinimumSize(QtCore.QSize(130, 30))
         self.label_8.setMaximumSize(QtCore.QSize(16777215, 30))
-        font = QtGui.QFont()
-        font.setPointSize(12)
+
         self.label_8.setFont(font)
         self.label_8.setObjectName("label_8")
         self.horizontalLayout_4.addWidget(self.label_8)
@@ -223,8 +224,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.label_9.setSizePolicy(sizePolicy)
         self.label_9.setMinimumSize(QtCore.QSize(70, 30))
         self.label_9.setMaximumSize(QtCore.QSize(70, 30))
-        font = QtGui.QFont()
-        font.setPointSize(12)
+
         self.label_9.setFont(font)
         self.label_9.setObjectName("label_9")
         self.horizontalLayout_5.addWidget(self.label_9)
@@ -242,9 +242,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         sizePolicy.setHeightForWidth(self.label_10.sizePolicy().hasHeightForWidth())
         self.label_10.setSizePolicy(sizePolicy)
         self.label_10.setMinimumSize(QtCore.QSize(100, 30))
-        self.label_10.setMaximumSize(QtCore.QSize(100, 30))
-        font = QtGui.QFont()
-        font.setPointSize(12)
+        self.label_10.setMaximumSize(QtCore.QSize(125, 30))
         self.label_10.setFont(font)
         self.label_10.setObjectName("label_10")
         self.horizontalLayout_5.addWidget(self.label_10)
@@ -258,6 +256,11 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.pushButton_3.setMaximumSize(QtCore.QSize(70, 30))
         self.pushButton_3.setObjectName("pushButton_3")
         self.horizontalLayout_5.addWidget(self.pushButton_3)
+        
+        self.languageButton = QtWidgets.QPushButton(self.centralwidget)
+        self.languageButton.setGeometry(QtCore.QRect(420, 10, 75, 30))
+        self.languageButton.setObjectName("languageButton")
+        
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 505, 23))
@@ -267,12 +270,13 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
+        # self.retranslateUi(MainWindow)
+        self.retranslateUiEnglish(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "SteamVideoCut"))
         self.label_5.setText(_translate("MainWindow", "视频路径："))
         self.toolButtonInput.setText(_translate("MainWindow", "..."))
         self.pushButton.setText(_translate("MainWindow", "切片"))
@@ -288,6 +292,38 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.comboBox.setItemText(1, _translate("MainWindow", "Chorme"))
         self.label_10.setText(_translate("MainWindow", "创意工坊名称："))
         self.pushButton_3.setText(_translate("MainWindow", "上传"))
+        self.languageButton.setText(_translate("MainWindow", "English"))
+        self.languageButton.setText(_translate("MainWindow", "English"))
+        
+    def retranslateUiEnglish(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "SteamVideoCut"))
+        self.label_5.setText(_translate("MainWindow", "Video Path:"))
+        self.toolButtonInput.setText(_translate("MainWindow", "..."))
+        self.pushButton.setText(_translate("MainWindow", "Split"))
+        self.pushButton_2.setText(_translate("MainWindow", "Close"))
+        self.label_6.setText(_translate("MainWindow", "Select Video Duration:"))
+        self.label_11.setText(_translate("MainWindow", ":"))
+        self.label_7.setText(_translate("MainWindow", " To"))
+        self.label_12.setText(_translate("MainWindow", ":"))
+        self.checkBox.setText(_translate("MainWindow", "Play Video"))
+        self.label_8.setText(_translate("MainWindow", "Output Split Name:"))
+        self.label_9.setText(_translate("MainWindow", "Browser:"))
+        self.comboBox.setItemText(0, _translate("MainWindow", "Edge"))
+        self.comboBox.setItemText(1, _translate("MainWindow", "Chorme"))
+        self.label_10.setText(_translate("MainWindow", "Name on workshop:"))
+        self.pushButton_3.setText(_translate("MainWindow", "Upload"))
+        self.languageButton.setText(_translate("MainWindow", "中文"))
+        
+    def switch_language(self):
+        """Switch between English and Chinese languages"""
+        if self.lanauge == 'English':
+            self.lanauge = 'Chinese'
+            self.retranslateUi(self)
+        else:
+            self.lanauge = 'English'
+            self.retranslateUiEnglish(self)
+        
 
     def init_slots(self):
         self.pushButton.clicked.connect(self.split_video_to_gifs)  # 连接切片函数
@@ -299,6 +335,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.pushButton_3.clicked.connect(self.upload_gif)
         # self.toolButtonOutput.clicked.connect(self.SaveResults)
         self.pushButton_2.clicked.connect(self.close)
+        self.languageButton.clicked.connect(self.switch_language)
 
         pix = QPixmap('template_1.png')        #设置label图片
         self.label_template.setPixmap(pix)
@@ -321,7 +358,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                     break
                 else:
                     if vdi == "m4v":
-                        QtWidgets.QMessageBox.information(self, "Error", "不支持该格式", QtWidgets.QMessageBox.Yes,
+                        error_msg = "不支持该格式" if self.lanauge == 'Chinese' else "Unsupported format"
+                        QtWidgets.QMessageBox.information(self, "Error", error_msg, QtWidgets.QMessageBox.Yes,
                                                           QtWidgets.QMessageBox.Yes)
                         return
 
@@ -476,7 +514,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             with open(path, 'wb') as f:
                 f.write(gif_data)
 
-        QtWidgets.QMessageBox.information(self, "Result", "切片成功", QtWidgets.QMessageBox.Yes, QtWidgets.QMessageBox.Yes)
+        success_msg = "切片成功" if self.lanauge == 'Chinese' else "Split successful"
+        QtWidgets.QMessageBox.information(self, "Result", success_msg, QtWidgets.QMessageBox.Yes, QtWidgets.QMessageBox.Yes)
 
     def upload_gif(self):
         try:
@@ -581,11 +620,13 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 #         break
 
             print("upload finish")
-            QtWidgets.QMessageBox.information(self, "Result", "上传成功", QtWidgets.QMessageBox.Yes, QtWidgets.QMessageBox.Yes)
+            success_msg = "上传成功" if self.lanauge == 'Chinese' else "Upload successful"
+            QtWidgets.QMessageBox.information(self, "Result", success_msg, QtWidgets.QMessageBox.Yes, QtWidgets.QMessageBox.Yes)
             time.sleep(1)
 
         except:
-            QtWidgets.QMessageBox.information(self, "Result", "上传失败", QtWidgets.QMessageBox.Yes,
+            error_msg = "上传失败" if self.lanauge == 'Chinese' else "Upload failed"
+            QtWidgets.QMessageBox.information(self, "Result", error_msg, QtWidgets.QMessageBox.Yes,
                                               QtWidgets.QMessageBox.Yes)
 
 #output_gif_prefix = "output_gif"  # 输出 GIF 文件的前缀
